@@ -1,0 +1,29 @@
+@using PlantOpedia.Models.Domain;
+@model IEnumerable<Oak>
+@{
+    ViewData["Title"] = "Oak Tree List";
+}
+
+<h1>Oak Tree List</h1>
+<div class="col-md-10">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Plant ID</th>
+                <th>Species</th>
+                <th>Taxonomic Name</th>
+        </thead>
+        <tbody>
+            @foreach (var Oak in Model)
+            {
+                <tr>
+                    <td>@Oak.PlantId</td>
+                    <td>@Oak.Species</td>
+                    <td>@Oak.TaxonName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+
