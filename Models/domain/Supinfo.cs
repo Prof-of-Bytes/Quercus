@@ -1,5 +1,5 @@
 ﻿
-namespace PlantOpedia.Models.Domain
+namespace Quercus.Models
 {
 
     public class Supinfo

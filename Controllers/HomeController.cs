@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PlantOpedia.Models;
+using Quercus.Models;
 
-namespace PlantOpedia.Controllers;
+namespace Quercus.Controllers;
 
 public class HomeController : Controller
 {

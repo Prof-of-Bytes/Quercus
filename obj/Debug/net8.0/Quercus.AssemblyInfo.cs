@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quercus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f41a4d69e4debb46796fc2c0f7bce339cf5bcc78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca399676e28c1db8ebf65e132cd75d666e6709ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Quercus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quercus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

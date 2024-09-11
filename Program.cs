@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PlantOpedia.Models;
+using Quercus.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

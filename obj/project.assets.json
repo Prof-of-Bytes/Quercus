@@ -2573,26 +2573,24 @@
     ]
   },
   "packageFolders": {
-    "J:\\NuGet": {}
+    "C:\\Users\\vernon.james\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "J:\\Quercus\\Quercus\\Quercus.csproj",
+      "projectUniqueName": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
       "projectName": "Quercus",
-      "projectPath": "J:\\Quercus\\Quercus\\Quercus.csproj",
-      "packagesPath": "J:\\NuGet",
-      "outputPath": "J:\\Quercus\\Quercus\\obj\\",
+      "projectPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
+      "packagesPath": "C:\\Users\\vernon.james\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2652,7 +2650,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

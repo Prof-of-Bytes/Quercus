@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using PlantOpedia.Models.Domain;
 
 namespace Quercus.Models
 {

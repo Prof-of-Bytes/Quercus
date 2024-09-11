@@ -1,29 +1,78 @@
-@using PlantOpedia.Models.Domain;
-@model IEnumerable<Oak>
+@using Quercus.Models;
+@using Quercus.Repos;
+@using Quercus.Utils;
+@model OakListViewModel
 @{
     ViewData["Title"] = "Oak Tree List";
+
+    OakGridData current = Model.CurrentRoute;
+    GridData routes = Model.CurrentRoute.Clone();
 }
 
 <h1>Oak Tree List</h1>
 <div class="col-md-10">
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Plant ID</th>
-                <th>Species</th>
-                <th>Taxonomic Name</th>
+    <table class="table table-bordered table-striped table-md">
+        <thead class="bg-dark text-white">
+            <th> @{
+                    routes.SetSortAndDirection(nameof(Oak.Species), current);
+                }
+                <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="text-white">Species</a>
+            </th>
+            <th> @{
+                    routes.SetSortAndDirection(nameof(Oak.TaxonName), current);
+                }
+                <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="text-white">Taxonmic Name</a>
+            </th>
+            <th> @{
+                    routes.SetSortAndDirection(nameof(Oak.Description), current);
+                }
+                <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="text-white">Description</a>
+            </th>
+            <th> @{
+                    routes.SetSortAndDirection(nameof(Oak.IpniId), current);
+                }
+                <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="text-white">Ipni Number</a>
+            </th>
+            using Quercus.Utils;
+            <th> @{
+                    routes.SetSortAndDirection(nameof(Oak.PlantId), current);
+                }
+                <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="text-white">Plant Id</a>
+            </th>
         </thead>
         <tbody>
-            @foreach (var Oak in Model)
+            @foreach (Oak oak in Model.Oaks)
             {
                 <tr>
-                    <td>@Oak.PlantId</td>
-                    <td>@Oak.Species</td>
-                    <td>@Oak.TaxonName</td>
+                    <td>
+                        <a asp-action="" asp-route-id="=@oak.Species" asp-route-slug="@oak.Species.Slug()"> @oak.Species</a>
+                    </td>
+                    <td>
+                        <a asp-action="" asp-route-id="=@oak.TaxonName" asp-route-slug="@oak.TaxonName.Slug()">
+                            @oak.Species</a>
+                    </td>
+                    <td>
+                        @oak.Description
+                    </td>
+                    <td>
+                        @oak.IpniId
+                    </td>
+                    <td>
+                        @oak.PlantId
+                    </td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
-</div>
+@{
+    routes = current.Clone();
+    for (int i = 1; i <= Model.TotalPages; i++)
+    {
+        routes.PageNumber = i;
+        string active = @Nav.Active(i, current.PageNumber);
+        <a asp-action="List" asp-all-route-data="@routes.ToDictionary()" class="btn btn-outline-primary @active">@i</a>
+    }
 
+}
+</div>

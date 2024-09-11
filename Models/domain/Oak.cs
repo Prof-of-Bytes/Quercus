@@ -1,9 +1,8 @@
 ﻿
-
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace PlantOpedia.Models.Domain
+namespace Quercus.Models
 {
 
     [PrimaryKey("PlantId")]
@@ -17,7 +16,7 @@ namespace PlantOpedia.Models.Domain
         public string? IpniId { get; set; }
 
         [Column("species")]
-        public string? Species { get; set; }
+        public string? Species { get; set; } = string.Empty;
 
         [Column("description")]
         public string? Description { get; set; }

@@ -1,4 +1,4 @@
-namespace PlantOpedia.Models;
+namespace Quercus.Models;
 
 public class ErrorViewModel
 {
