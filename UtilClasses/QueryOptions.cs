@@ -5,7 +5,7 @@ namespace Quercus.Utils{
     public class QueryOptions<T>{
 
         public Expression<Func<T, Object>> OrderBy {get; set;} = null!;
-        public Expression<Func<T, Object>> Where {get; set;} = null!;
+        public Expression<Func<T, bool>> Where {get; set;} = null!;
 
         public string OrderByDirection {get; set;} = "asc"; //default value
 
@@ -23,6 +23,14 @@ namespace Quercus.Utils{
 
         public bool HasPaging => PageNumber > 0 && PageSize > 0;
 
+    }
+
+    public static class QueryExtensions{
+
+        public static IQueryable<T> PageBy<T>(this IQueryable<T> query, int pagenum, int pagesize)
+        {
+            return query.Skip((pagenum -1 ) * pagesize).Take(pagesize);
+        }
     }
 
 

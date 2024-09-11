@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PlantOpedia.Models.Domain;
 
-namespace PlantOpedia.Models
+namespace Quercus.Models
 {
 
     public class TreeContext : DbContext
