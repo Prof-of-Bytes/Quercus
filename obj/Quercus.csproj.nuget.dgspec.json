@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {}
+    "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {
+    "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
+        "projectUniqueName": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
         "projectName": "Quercus",
-        "projectPath": "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
+        "projectPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
         "packagesPath": "C:\\Users\\vernon.james\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vernon.james\\Quercus\\Quercus\\obj\\",
+        "outputPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config"

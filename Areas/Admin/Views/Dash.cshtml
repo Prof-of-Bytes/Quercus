@@ -1,0 +1,31 @@
+@model AdminUserViewModel;
+@{
+    ViewData["Title"] = " | Admin Dashboard";
+}
+<h2 class="mb-2"> Admin Dashboard </h2>
+<h5 class="mt-2"><a asp-area="Admin" asp-controller="UserController" asp-action="Add"> Add User</a> </h5>
+<table class="table table-bordered table-striped table-sm">
+    <thead>
+        <tr>
+            <th> User Name</th>
+            <th> Roles </th>
+        </tr>
+    </thead>
+    using Quercus.Admin.Models;
+#line default
+    @if (Model.Users.Count() <= 0)
+        {
+            <tr>
+                <td>No Users</td>
+                <td>No User: No Roles</td>
+            </tr>
+        }
+        else
+        {
+            @foreach(QuercusUser user in Model.Users)
+            {
+                
+            }
+        }
+    </tbody>
+</table>
