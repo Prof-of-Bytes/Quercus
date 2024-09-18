@@ -9,9 +9,10 @@ namespace Quercus.Models
 
     public class TreeContext : IdentityDbContext<User>
     {
-        public DbSet<Oak> Oaks { get; set; }
-        public DbSet<Supinfo> Supinfo { get; set; }
-        public DbSet<Inventory> Inventory { get; set; }
+        // public DbSet<Oak> Oaks { get; set; }
+        // public DbSet<Supinfo> Supinfo { get; set; }
+        // public DbSet<Inventory> Inventory { get; set; }
+        public DbSet<User> Users {get; set;}
         public TreeContext(DbContextOptions<TreeContext> options) : base(options)
         {
 
