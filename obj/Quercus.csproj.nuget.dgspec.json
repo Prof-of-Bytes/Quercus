@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {}
+    "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {}
   },
   "projects": {
-    "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {
+    "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
+        "projectUniqueName": "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
         "projectName": "Quercus",
-        "projectPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
+        "projectPath": "C:\\Users\\vernon.james\\Quercus\\Quercus\\Quercus.csproj",
         "packagesPath": "C:\\Users\\vernon.james\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\vernon.james\\Quercus\\Quercus\\obj\\",
+        "outputPath": "C:\\Users\\vernon.james\\Quercus\\Quercus\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vernon.james\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

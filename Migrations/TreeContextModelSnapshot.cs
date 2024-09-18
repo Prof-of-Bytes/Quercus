@@ -190,6 +190,10 @@ namespace Quercus.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ShortUserName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("INTEGER");
 
@@ -207,96 +211,6 @@ namespace Quercus.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("Quercus.Models.Inventory", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("EntryDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("warehouse_location")
-                        .HasComment("Location of the plant");
-
-                    b.Property<string>("OakId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Inventory");
-                });
-
-            modelBuilder.Entity("Quercus.Models.Oak", b =>
-                {
-                    b.Property<string>("PlantId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("plant_id");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("description");
-
-                    b.Property<string>("IpniId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("ipni_id");
-
-                    b.Property<string>("Species")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("species");
-
-                    b.Property<string>("TaxonName")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("taxon_name");
-
-                    b.HasKey("PlantId");
-
-                    b.ToTable("Oaks");
-                });
-
-            modelBuilder.Entity("Quercus.Models.Supinfo", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Climate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Family")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Genus")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("GenusHybrid")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("GeoArea")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PlantId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SpeciesHybrid")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TaxRank")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TaxonStatus")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Supinfo");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
