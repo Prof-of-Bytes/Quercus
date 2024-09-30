@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 
-using Quercus.Admin.Models;
+using Quercus.Admin;
 
 public class AdminUserViewModel{
 

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 using Quercus.Identity;
 
-namespace Quercus.Admin.Models
+namespace Quercus.Admin
 {
 #pragma warning restore IDE0130 // Namespace does not match folder structure
 
