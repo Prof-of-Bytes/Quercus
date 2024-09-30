@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Quercus.Identity;
+
 
 
 namespace Quercus.Admin
@@ -9,10 +9,10 @@ namespace Quercus.Admin
     [Area("Admin")]
     public class UserController : Controller
     {
-        private UserManager<User> userManager;
+        private UserManager<IdentityUser> userManager;
         private RoleManager<IdentityRole> roleManager;
 
-        public UserController(UserManager<User> um, RoleManager<IdentityRole> rm)
+        public UserController(UserManager<IdentityUser> um, RoleManager<IdentityRole> rm)
         {
             userManager = um;
             roleManager = rm;
@@ -22,9 +22,9 @@ namespace Quercus.Admin
         {
             List<QuercusUser> adminUsers = new List<QuercusUser>();
 
-            foreach (User user in userManager.Users)
+            foreach (IdentityUser user in userManager.Users)
             {
-                QuercusUser qu = (QuercusUser)user;
+                QuercusUser qu = (QuercusUser) user;
                 qu.AssignedRoles = await userManager.GetRolesAsync(user);
                 adminUsers.Add(qu);
             }
