@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Quercus.Admin;
 using Quercus.Identity;
 
-#pragma warning disable IDE0130 // Namespace does not match folder structure
+
 namespace Quercus.Models
-#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
 
     public class TreeContext : IdentityDbContext<QuercusUser>
@@ -13,7 +12,7 @@ namespace Quercus.Models
         // public DbSet<Oak> Oaks { get; set; }
         // public DbSet<Supinfo> Supinfo { get; set; }
         // public DbSet<Inventory> Inventory { get; set; }
-        public DbSet<User> Users {get; set;}
+        //public DbSet<QuercusUser> Users {get; set;} = null!;
         public TreeContext(DbContextOptions<TreeContext> options) : base(options)
         {
 

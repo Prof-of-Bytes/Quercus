@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Quercus.Admin;
 using Quercus.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TreeContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("TreeContextSqlite")));
+builder.Services.AddIdentity<QuercusUser, IdentityRole>(options => {}).AddEntityFrameworkStores<TreeContext>().AddDefaultTokenProviders();
 
 var app = builder.Build();
 
