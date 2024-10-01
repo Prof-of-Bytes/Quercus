@@ -8,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<TreeContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("TreeContextSqlite")));
-builder.Services.AddIdentity<QuercusUser, IdentityRole>(options => {}).AddEntityFrameworkStores<TreeContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<QuercusUser, IdentityRole>(options => {
+    options.Password.RequiredLength = 10;
+}).AddEntityFrameworkStores<TreeContext>().AddDefaultTokenProviders();
 
 var app = builder.Build();
 

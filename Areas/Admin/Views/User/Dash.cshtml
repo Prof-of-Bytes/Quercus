@@ -11,21 +11,19 @@
             <th> Roles </th>
         </tr>
     </thead>
-    using Quercus.Admin.Models;
-#line default
     @if (Model.Users.Count() <= 0)
+    {
+        <tr>
+            <td>No Users</td>
+            <td>No User: No Roles</td>
+        </tr>
+    }
+    else
+    {
+        @foreach (QuercusUser user in Model.Users)
         {
-            <tr>
-                <td>No Users</td>
-                <td>No User: No Roles</td>
-            </tr>
+
         }
-        else
-        {
-            @foreach(QuercusUser user in Model.Users)
-            {
-                
-            }
-        }
+    }
     </tbody>
 </table>
