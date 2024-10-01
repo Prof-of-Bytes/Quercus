@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Quercus.Admin;
 using Quercus.Identity;
 
 #pragma warning disable IDE0130 // Namespace does not match folder structure
@@ -7,7 +8,7 @@ namespace Quercus.Models
 #pragma warning restore IDE0130 // Namespace does not match folder structure
 {
 
-    public class TreeContext : IdentityDbContext<User>
+    public class TreeContext : IdentityDbContext<QuercusUser>
     {
         // public DbSet<Oak> Oaks { get; set; }
         // public DbSet<Supinfo> Supinfo { get; set; }
