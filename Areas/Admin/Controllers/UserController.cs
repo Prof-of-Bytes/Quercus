@@ -18,6 +18,7 @@ namespace Quercus.Admin
             roleManager = rm;
         }
 
+        [HttpGet]
         public async Task<IActionResult> Dash()
         {
             List<QuercusUser> adminUsers = new List<QuercusUser>();
@@ -34,7 +35,8 @@ namespace Quercus.Admin
                 Roles = roleManager.Roles
             };
             return View(model);
-        }
+       }
+    
     }
 
 }

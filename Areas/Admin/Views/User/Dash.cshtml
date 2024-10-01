@@ -1,29 +1,59 @@
+@using Microsoft.AspNetCore.Identity
 @model AdminUserViewModel;
 @{
     ViewData["Title"] = " | Admin Dashboard";
 }
 <h2 class="mb-2"> Admin Dashboard </h2>
 <h5 class="mt-2"><a asp-area="Admin" asp-controller="UserController" asp-action="Add"> Add User</a> </h5>
-<table class="table table-bordered table-striped table-sm">
-    <thead>
-        <tr>
-            <th> User Name</th>
-            <th> Roles </th>
-        </tr>
-    </thead>
-    @if (Model.Users.Count() <= 0)
-    {
-        <tr>
-            <td>No Users</td>
-            <td>No User: No Roles</td>
-        </tr>
-    }
-    else
-    {
-        @foreach (QuercusUser user in Model.Users)
-        {
+<div class="container-lg">
+    <div class="row">
+        <table class="table table-bordered table-striped table-sm">
+            <thead>
+                <tr>
+                    <th> User Name</th>
+                    <th> Roles </th>
+                </tr>
+            </thead>
+            @if (Model.Users.Count() <= 0)
+            {
+                <tr>
+                    <td>No Users</td>
+                    <td>No User: No Roles</td>
+                </tr>
 
-        }
-    }
-    </tbody>
-</table>
+            }
+            else
+            {
+                @foreach (QuercusUser user in Model.Users)
+                {
+
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Available Roles </th>
+                </tr>
+            </thead>
+            @if (Model.Roles.Count() <= 0)
+            {
+                <tr>
+                    <td>No Roles Available</td>
+                    <td><button type="button" class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="AddRole">Add Role</button></td>
+                </tr>
+            }
+            else
+            {
+                @foreach (IdentityRole role in Model.Roles)
+                {
+
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

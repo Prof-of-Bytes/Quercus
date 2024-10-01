@@ -253,3 +253,10 @@ c:\Users\vernon.james\Quercus\Quercus\obj\Debug\net8.0\scopedcss\projectbundle\Q
 c:\Users\vernon.james\Quercus\Quercus\obj\Debug\net8.0\Quercus.csproj.Up2Date
 c:\Users\vernon.james\Quercus\Quercus\obj\Debug\net8.0\Quercus.genruntimeconfig.cache
 c:\Users\vernon.james\Quercus\Quercus\obj\Debug\net8.0\ref\Quercus.dll
+j:\Quercus\Quercus\obj\Debug\net8.0\Quercus.sourcelink.json
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+j:\Quercus\Quercus\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
