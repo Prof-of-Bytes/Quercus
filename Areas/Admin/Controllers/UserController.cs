@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using System.Reflection.Metadata.Ecma335;
+using Quercus.Repos;
+using Quercus.Models;
 
 
 
@@ -12,10 +15,13 @@ namespace Quercus.Admin
         private UserManager<QuercusUser> userManager;
         private RoleManager<IdentityRole> roleManager;
 
-        public UserController(UserManager<QuercusUser> um, RoleManager<IdentityRole> rm)
+        private Repository<QuercusUser> _data { get; set; }
+
+        public UserController(UserManager<QuercusUser> um, RoleManager<IdentityRole> rm, TreeContext ctx)
         {
             userManager = um;
             roleManager = rm;
+            _data = new Repository<QuercusUser>(ctx);
         }
 
         [HttpGet]
@@ -25,7 +31,7 @@ namespace Quercus.Admin
 
             foreach (QuercusUser user in userManager.Users)
             {
-                QuercusUser qu = (QuercusUser) user;
+                QuercusUser qu = (QuercusUser)user;
                 qu.AssignedRoles = await userManager.GetRolesAsync(user);
                 adminUsers.Add(qu);
             }
@@ -35,8 +41,49 @@ namespace Quercus.Admin
                 Roles = roleManager.Roles
             };
             return View(model);
-       }
-    
-    }
+        }
 
+        [HttpGet]
+        public IActionResult AddUser()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AddUser(AdminRegisterAccountViewModel vm)
+        {
+
+            if (ModelState.IsValid)
+            {
+                QuercusUser usertoAdd = new() { ShortUserName = vm.Username, UserName = vm.Username, PasswordHash = vm.Password };
+
+                if (usertoAdd != null)
+                {
+                    _data.Insert(usertoAdd);
+                    _data.Save();
+                    return View(RedirectToAction("Dash", "User", usertoAdd));
+                }
+                else
+                {
+                    return View();
+                }
+
+            }
+            else
+            {
+                return View();
+            }
+
+            // [HttpGet]
+            // public async Task Task<IActionResult> EditUser(){
+
+            // }
+
+            // [Httppost]
+            // public async Task<IActionResult> EditUser()
+            // {
+
+            // }
+
+        }
+    }
 }

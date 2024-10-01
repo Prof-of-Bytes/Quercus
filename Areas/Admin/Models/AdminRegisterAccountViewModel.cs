@@ -12,10 +12,6 @@ namespace Quercus.Admin
 
             Roles = [];
         }
-        public void AddRole(string roleName)
-        {
-            Roles.Add(new IdentityRole(roleName));
-        }
 
     }
 }

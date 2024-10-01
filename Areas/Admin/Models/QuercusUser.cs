@@ -9,14 +9,11 @@ namespace Quercus.Admin
 
     public class QuercusUser : IdentityUser
     {
+
         public string ShortUserName { get; set; } = null!;
         
         [NotMapped]
         public IList<string> AssignedRoles { get; set; } = null!;
 
-        public static explicit operator QuercusUser(User v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
