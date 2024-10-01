@@ -7,3 +7,11 @@ obj/Debug/net8.0/Quercus.AssemblyInfoInputs.cache
 obj/Debug/net8.0/Quercus.assets.cache
 obj/Debug/net8.0/Quercus.csproj.AssemblyReference.cache
 obj/Debug/net8.0/Quercus.GeneratedMSBuildEditorConfig.editorconfig
+obj/project.assets.json
+obj/project.nuget.cache
+obj/Quercus.csproj.nuget.dgspec.json
+obj/Quercus.csproj.nuget.g.props
+obj/Quercus.csproj.nuget.g.targets
+obj/Debug/net8.0/Quercus.assets.cache
+obj/Debug/net8.0/Quercus.RazorAssemblyInfo.cache
+obj/Debug/net8.0/Quercus.RazorAssemblyInfo.cs
