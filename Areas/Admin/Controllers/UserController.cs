@@ -9,10 +9,10 @@ namespace Quercus.Admin
     [Area("Admin")]
     public class UserController : Controller
     {
-        private UserManager<IdentityUser> userManager;
+        private UserManager<QuercusUser> userManager;
         private RoleManager<IdentityRole> roleManager;
 
-        public UserController(UserManager<IdentityUser> um, RoleManager<IdentityRole> rm)
+        public UserController(UserManager<QuercusUser> um, RoleManager<IdentityRole> rm)
         {
             userManager = um;
             roleManager = rm;
@@ -22,7 +22,7 @@ namespace Quercus.Admin
         {
             List<QuercusUser> adminUsers = new List<QuercusUser>();
 
-            foreach (IdentityUser user in userManager.Users)
+            foreach (QuercusUser user in userManager.Users)
             {
                 QuercusUser qu = (QuercusUser) user;
                 qu.AssignedRoles = await userManager.GetRolesAsync(user);
