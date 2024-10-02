@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.Identity;
 using System.Reflection.Metadata.Ecma335;
 using Quercus.Repos;
 using Quercus.Models;
+using System.Security.Cryptography.X509Certificates;
 
 
 
 namespace Quercus.Admin
 {
     [Area("Admin")]
+    // [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private UserManager<QuercusUser> userManager;
@@ -60,7 +62,7 @@ namespace Quercus.Admin
                 {
                     _data.Insert(usertoAdd);
                     _data.Save();
-                    return View(RedirectToAction("Dash", "User", usertoAdd));
+                    return View("AddUserSucess", usertoAdd);
                 }
                 else
                 {
@@ -73,17 +75,9 @@ namespace Quercus.Admin
                 return View();
             }
 
-            // [HttpGet]
-            // public async Task Task<IActionResult> EditUser(){
-
-            // }
-
-            // [Httppost]
-            // public async Task<IActionResult> EditUser()
-            // {
-
-            // }
-
+        }
+        public IActionResult AddUserSucess(QuercusUser qu){
+            return View(qu);
         }
     }
 }

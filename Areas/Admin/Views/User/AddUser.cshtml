@@ -4,15 +4,15 @@
     <form method="post" asp-asp-area="Admin" asp-controller="User" asp-action="AddUser">
         <div class="container-fluid">
             <div class="mb-3">
-                <input type="text" class="form-control" id="Username" placeholder="Enter a valid username here">
+                <input type="text" class="form-control" id="Username" asp-for="Username" placeholder="Enter a valid username here">
                 <label for="Username" class="form=label">&spades; User Name &spades;</label>
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" id="Password" placeholder="Enter a valid username here">
+                <input type="password" class="form-control" id="Password" asp-for="Password" placeholder="Enter a valid username here">
                 <label for="Password" class="form=label">Enter Password</label>
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" id="ConfirmPass" placeholder="Enter a valid username here">
+                <input type="password" class="form-control" id="ConfirmPass" asp-for="ConfirmPass" placeholder="Enter a valid username here">
                 <label for="ConfirmPass" class="form=label">Confirm Password</label>
             </div>
             <div class="row">
